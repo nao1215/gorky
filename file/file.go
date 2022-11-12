@@ -5,7 +5,7 @@ package file
 import (
 	"io"
 	"os"
-	"path"
+	"path/filepath"
 	"runtime"
 	"strings"
 )
@@ -80,7 +80,7 @@ func IsExecutable(path string) bool {
 
 // IsHiddenFile reports whether the path exists and is included hidden file.
 func IsHiddenFile(filePath string) bool {
-	_, file := path.Split(filePath)
+	_, file := filepath.Split(filePath)
 	if IsFile(filePath) && strings.HasPrefix(file, ".") {
 		return true
 	}
