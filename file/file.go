@@ -105,5 +105,5 @@ func Copy(src string, dest string) error {
 	if err != nil {
 		return err
 	}
-	return nil
+	return d.Close()
 }
