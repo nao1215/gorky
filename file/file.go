@@ -3,10 +3,10 @@
 package file
 
 import (
-	"internal/goos"
 	"io"
 	"os"
 	"path"
+	"runtime"
 	"strings"
 )
 
@@ -71,7 +71,7 @@ func IsWritable(path string) bool {
 
 // IsExecutable reports whether the path exists and is executable.
 func IsExecutable(path string) bool {
-	if goos.GOOS == "windows" {
+	if runtime.GOOS == "windows" {
 		return strings.HasSuffix(path, ".exe")
 	}
 	stat, err := os.Stat(path)
