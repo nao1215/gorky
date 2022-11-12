@@ -3,7 +3,7 @@
 package file
 
 import (
-	"bufio"
+	"internal/goos"
 	"io"
 	"os"
 	"path"
@@ -71,6 +71,9 @@ func IsWritable(path string) bool {
 
 // IsExecutable reports whether the path exists and is executable.
 func IsExecutable(path string) bool {
+	if goos.GOOS == "windows" {
+		return strings.HasSuffix(path, ".exe")
+	}
 	stat, err := os.Stat(path)
 	return (err == nil) && ((stat.Mode() & Executable) != 0)
 }
@@ -103,27 +106,4 @@ func Copy(src string, dest string) error {
 		return err
 	}
 	return nil
-}
-
-// ToList returns a list of file contents
-func ToList(path string) ([]string, error) {
-	var strList []string
-	f, err := os.Open(path)
-	if err != nil {
-		return nil, err
-	}
-	defer f.Close()
-
-	r := bufio.NewReader(f)
-	for {
-		line, err := r.ReadString('\n')
-		if err != nil && err != io.EOF {
-			return nil, err
-		}
-		if err == io.EOF && len(line) == 0 {
-			break
-		}
-		strList = append(strList, line)
-	}
-	return strList, nil
 }
