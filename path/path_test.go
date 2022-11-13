@@ -39,6 +39,13 @@ func Test_Ext(t *testing.T) {
 			},
 			want: "",
 		},
+		{
+			name: "not get extension: hidden file at current directory",
+			args: args{
+				path: ".sample",
+			},
+			want: "",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
