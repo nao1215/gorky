@@ -12,6 +12,7 @@ gorky is a library of generic utility code for golang. When the autho r(it's me)
 |:--|:--|
 |file|check the file type and checks for the existence of files.|
 |[nameconv](,/../doc/en/README_nameconv.md)|converts string naming conventions(e.g. snake case to camel case)|
+|path|extracts specified string from a file path string. This package define only those features not provided by package path/filepath.|
 
 # Support OS
 - Linux (main target)
