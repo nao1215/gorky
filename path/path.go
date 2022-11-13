@@ -15,9 +15,5 @@ func Ext(path string) string {
 	if pos <= 0 {
 		return ""
 	}
-	// hidden file
-	if strings.HasPrefix(path, ".") && pos == 0 {
-		return ""
-	}
 	return base[pos:]
 }
