@@ -2,6 +2,7 @@
 [![PlatformTests](https://github.com/nao1215/gorky/actions/workflows/platform_test.yml/badge.svg)](https://github.com/nao1215/gorky/actions/workflows/platform_test.yml)
 [![reviewdog](https://github.com/nao1215/gorky/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/nao1215/gorky/actions/workflows/reviewdog.yml)
 [![codecov](https://codecov.io/gh/nao1215/gorky/branch/main/graph/badge.svg?token=QlXh0Q9Cxt)](https://codecov.io/gh/nao1215/gorky)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nao1215/gorky)](https://goreportcard.com/report/github.com/nao1215/gorky)
 [![Go Reference](https://pkg.go.dev/badge/github.com/nao1215/gorky.svg)](https://pkg.go.dev/github.com/nao1215/gorky)
 # gorky - powerful & bitter utility library
 gorky is a library of generic utility code for golang. When the autho r(it's me) was creating OSS projects, I copied the code into the project many times. I felt this process was a waste of time. For this reason, I have put together a generic code as the gorky library.
@@ -11,6 +12,7 @@ gorky is a library of generic utility code for golang. When the autho r(it's me)
 |:--|:--|
 |file|check the file type and checks for the existence of files.|
 |[nameconv](,/../doc/en/README_nameconv.md)|converts string naming conventions(e.g. snake case to camel case)|
+|path|extracts specified string from a file path string. This package define only those features not provided by package path/filepath.|
 
 # Support OS
 - Linux (main target)
