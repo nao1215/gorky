@@ -17,8 +17,6 @@ GO_PKGROOT  = ./...
 GO_PACKAGES = $(shell $(GO_LIST) $(GO_PKGROOT))
 GO_LDFLAGS  = -ldflags '-X github.com/nao1215/gorky/cmd.Version=${VERSION}'
 
-
-
 clean: ## Clean project
 	-rm -rf $(APP) cover.out cover.html
 
