@@ -5,16 +5,17 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/nao1215/gorky)](https://goreportcard.com/report/github.com/nao1215/gorky)
 [![Go Reference](https://pkg.go.dev/badge/github.com/nao1215/gorky.svg)](https://pkg.go.dev/github.com/nao1215/gorky)
 # gorky - powerful & bitter utility library
-gorky is a library of generic utility code for golang. When the autho r(it's me) was creating OSS projects, I copied the code into the project many times. I felt this process was a waste of time. For this reason, I have put together a generic code as the gorky library.
+gorky is a library of generic utility code for golang. When the author (it's me) was creating OSS projects, I copied the code into the project many times. I felt this process was a waste of time. For this reason, I have put together a generic code as the gorky library.
 
 # Packages within gorky
 |package name| description|
 |:--|:--|
 |errfmt| format the error message|
 |file|check the file type and checks for the existence of files.|
-|[nameconv](,/../doc/en/README_nameconv.md)|converts string naming conventions(e.g. snake case to camel case)|
+|[nameconv](doc/en/README_nameconv.md)|converts string naming conventions(e.g. snake case to camel case)|
 |path|extracts specified string from a file path string. This package define only those features not provided by package path/filepath.|
 |str|implement string manipulations not provided by the golang standard package (strings package)|
+|[golden](doc/en/README_golden.md)|golden file test utility|
 
 # Support OS
 - Linux (main target)
