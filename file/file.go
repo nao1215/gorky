@@ -4,6 +4,7 @@ package file
 
 import (
 	"io"
+	"io/fs"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -19,6 +20,13 @@ const (
 	Writable
 	// Executable : executable bits
 	Executable
+)
+
+const (
+	// FileModeCreatingDir is used for creating directory
+	FileModeCreatingDir fs.FileMode = 0750
+	// FileModeCreatingFile is used for creating directory
+	FileModeCreatingFile fs.FileMode = 0600
 )
 
 // IsFile reports whether the path exists and is a file.
